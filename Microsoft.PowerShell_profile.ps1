@@ -44,10 +44,10 @@ function Get-Theme {
             Invoke-Expression $existingTheme
             return
         }
-        oh-my-posh init pwsh --config "C:\Users\Saimnieks\Documents\GitHub\windows-terminal\onhalf.minimal.omp.json" | Invoke-Expression
+        oh-my-posh init pwsh --config https://raw.githubusercontent.com/villhelmms/windows-terminal/refs/heads/main/onhalf.minimal.omp.custom.json | Invoke-Expression
         # oh-my-posh init pwsh --config https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/onehalf.minimal.omp.json | Invoke-Expression
     } else {
-        oh-my-posh init pwsh --config "C:\Users\Saimnieks\Documents\GitHub\windows-terminal\onhalf.minimal.omp.json" | Invoke-Expression
+        oh-my-posh init pwsh --config https://raw.githubusercontent.com/villhelmms/windows-terminal/refs/heads/main/onhalf.minimal.omp.custom.json | Invoke-Expression
         # oh-my-posh init pwsh --config https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/onehalf.minimal.omp.json | Invoke-Expression
     }
 }
