@@ -1,3 +1,3 @@
 # Powershell Profile
 
-A Powershell profile based on the (ChrisTitusTech)[https://github.com/ChrisTitusTech/powershell-profile] Powershell profile.
+A Powershell profile based on the [ChrisTitusTech Powershell profile](https://github.com/ChrisTitusTech/powershell-profile).
