@@ -37,6 +37,8 @@ function Update-Profile {
     }
 }
 
+$configPath = Join-Path -Path $PSScriptRoot -ChildPath "onhalf.minimal.custom.omp.json"
+
 function Get-Theme {
     if (Test-Path -Path $PROFILE.CurrentUserAllHosts -PathType leaf) {
         $existingTheme = Select-String -Raw -Path $PROFILE.CurrentUserAllHosts -Pattern "oh-my-posh init pwsh --config"
@@ -44,10 +46,10 @@ function Get-Theme {
             Invoke-Expression $existingTheme
             return
         }
-        oh-my-posh init pwsh --config https://raw.githubusercontent.com/villhelmms/windows-terminal/refs/heads/main/onhalf.minimal.omp.custom.json | Invoke-Expression
+        oh-my-posh init pwsh --config $configPath | Invoke-Expression
         # oh-my-posh init pwsh --config https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/onehalf.minimal.omp.json | Invoke-Expression
     } else {
-        oh-my-posh init pwsh --config https://raw.githubusercontent.com/villhelmms/windows-terminal/refs/heads/main/onhalf.minimal.omp.custom.json | Invoke-Expression
+        oh-my-posh init pwsh --config $configPath | Invoke-Expression
         # oh-my-posh init pwsh --config https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/onehalf.minimal.omp.json | Invoke-Expression
     }
 }
