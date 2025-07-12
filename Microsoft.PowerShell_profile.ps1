@@ -20,7 +20,7 @@ if (Test-Path($ChocolateyProfile)) {
 # Check for Profile Updates
 function Update-Profile {
     try {
-        $url = "https://raw.githubusercontent.com/villhelmms/windows-terminal/refs/heads/main/Microsoft.PowerShell_profile.ps1"
+        $url = "https://raw.githubusercontent.com/villhelmms/powershell-profile/refs/heads/main/Microsoft.PowerShell_profile.ps1"
         $oldhash = Get-FileHash $PROFILE
         Invoke-RestMethod $url -OutFile "$env:temp/Microsoft.PowerShell_profile.ps1"
         $newhash = Get-FileHash "$env:temp/Microsoft.PowerShell_profile.ps1"
@@ -44,10 +44,10 @@ function Get-Theme {
             Invoke-Expression $existingTheme
             return
         }
-        oh-my-posh init pwsh --config https://raw.githubusercontent.com/villhelmms/windows-powershell-profile/refs/heads/main/onhalf.minimal.custom.omp.json | Invoke-Expression
+        oh-my-posh init pwsh --config https://raw.githubusercontent.com/villhelmms/powershell-profile/refs/heads/main/onhalf.minimal.custom.omp.json | Invoke-Expression
         # oh-my-posh init pwsh --config https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/onehalf.minimal.omp.json | Invoke-Expression
     } else {
-        oh-my-posh init pwsh --config https://raw.githubusercontent.com/villhelmms/windows-powershell-profile/refs/heads/main/onhalf.minimal.custom.omp.json | Invoke-Expression
+        oh-my-posh init pwsh --config https://raw.githubusercontent.com/villhelmms/powershell-profile/refs/heads/main/onhalf.minimal.custom.omp.json | Invoke-Expression
         # oh-my-posh init pwsh --config https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/onehalf.minimal.omp.json | Invoke-Expression
     }
 }
